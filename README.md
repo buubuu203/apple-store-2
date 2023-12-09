@@ -68,8 +68,11 @@ Visit our website now and discover the magic of Apple at your fingertips.
 <!-- Description  -->
 <div id="MoTa">
     <h3>Description</h3>
-  <a href="https://apple-store-steel.vercel.app/"> <h4>Live demo</h4>
-  <a href="https://apple-store-steel.vercel.app/">https://apple-store-steel.vercel.app/</a>
+  <a href="https://apple-store-is207.vercel.app/"> <h4>Live demo admin</h4>
+  <a href="https://apple-store-is207.vercel.app/">https://apple-store-is207.vercel.app/</a>
+<a href="https://apple-store-is207-client.vercel.app/"> <h4>Live demo client</h4>
+  <a href="https://apple-store-is207-client.vercel.app/">https://apple-store-is207-client.vercel.app/</a>
+
 </a>
 <div id="yTuong">
     <h4>Idea</h4>
