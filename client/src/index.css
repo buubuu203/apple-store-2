@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import fonts */
+/* @font-face {
+	font-family: "SFProMedium";
+	src: local("SFPro"),
+		url("./assets/fonts/sf-pro-display-cufonfonts/SFPRODISPLAYMEDIUM.OTF")
+			format("truetype");
+}
+
+@font-face {
+	font-family: "SFProBold";
+	src: local("SFPro"),
+		url("./assets/fonts/sf-pro-display-cufonfonts/SFPRODISPLAYBOLD.OTF")
+			format("truetype");
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: "SFProLight";
+	src: local("SFPro"),
+		url("./assets/fonts/sf-pro-display-cufonfonts/SFPRODISPLAYREGULAR.OTF")
+			format("truetype");
+	font-weight: normal;
+} */
+@layer base {
+  @font-face {
+    font-family: SFPro;
+    font-weight: 400;
+    src: url(./assets/fonts/sf-pro-display-cufonfonts/SFPRODISPLAYREGULAR.OTF)
+      format("woff");
+  }
+  @font-face {
+    font-family: SFPro;
+    font-weight: 500;
+    src: url(./assets/fonts/sf-pro-display-cufonfonts/SFPRODISPLAYMEDIUM.OTF)
+      format("woff");
+  }
+  @font-face {
+    font-family: SFPro;
+    font-weight: 700;
+    src: url(./assets/fonts/sf-pro-display-cufonfonts/SFPRODISPLAYBOLD.OTF)
+      format("woff");
+  }
+}
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: "SFProMedium";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

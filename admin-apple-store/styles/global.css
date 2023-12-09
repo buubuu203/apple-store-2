@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	box-sizing: border-box;
+}
+
+@layer base {
+	html {
+		font-family: "Open Sans", sans-serif;
+	}
+
+	div {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+	div::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+@layer components {
+	.bg_admin {
+		background: linear-gradient(
+			112.9deg,
+			rgb(194, 221, 221),
+			rgba(0, 5, 58, 0.593)
+		);
+	}
+	#hamburger:checked ~ div > #bar-mobile {
+		transform: translateX(-100%);
+		transition: all linear 0.1s;
+	}
+
+	#hamburger:not(:checked) ~ div > #bar-mobile {
+		transform: translateX(0);
+		transition: all linear 0.2s;
+	}
+}
