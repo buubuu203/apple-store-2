@@ -1,4 +1,4 @@
-# apple-store
+# APPLE STORE
 
 <div id="top"></div>
 <!-- Table of Contents -->
@@ -160,7 +160,9 @@ Rental Vouchers and Invoices Management
 3. Download Apple Store Source : https://github.com/buubuu203/apple-store.
 4. In the project terminal, run the following command to start the BE and FE:
 + With BE, run: php artisan serve
-+ With FE, run: npm start
++ With client, run: npm start
++ With admin, run: yarn dev
+
 
 # Author
 
