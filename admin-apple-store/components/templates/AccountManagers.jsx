@@ -3,8 +3,6 @@ import { useState } from "react";
 import { Table } from "../atoms";
 import { Modal } from "../moleculers";
 import { Controller } from "react-hook-form";
-//FIXME: Không phải lấy dữ liệu cứng từ page.js mà lấy từ DB lên
-//TODO: Có thể thêm, xóa, sửa 1 acc của user bất kỳ
 
 const AccountManagers = ({
   columns,
@@ -26,11 +24,11 @@ const AccountManagers = ({
           className="space-y-2"
           onSubmit={formUpdate.handleSubmit(handleUpdate)}
         >
-          <div className="flex gap-2">
+          <div className="">
             <div>
               <label
                 htmlFor="text"
-                className="block mb-1 text-sm font-medium text-gray-900 dark:text-white"
+                className="p-1 block mb-1 text-sm font-medium text-gray-900 dark:text-white"
               >
                 Email
               </label>
@@ -53,7 +51,7 @@ const AccountManagers = ({
             <div>
               <label
                 htmlFor="text"
-                className="block mb-1 text-sm font-medium text-gray-900 dark:text-white"
+                className="p-1 block mb-1 text-sm font-medium text-gray-900 dark:text-white"
               >
                 Tên đầy đủ
               </label>
@@ -72,12 +70,9 @@ const AccountManagers = ({
                 )}
               />
             </div>
-          </div>
-
-          <div className="flex gap-2">
             <label
               htmlFor="text"
-              className="block mb-1 text-sm font-medium text-gray-900 dark:text-white"
+              className="p-1 self-center block text-sm font-medium text-gray-900 dark:text-white "
             >
               SĐT
             </label>
@@ -106,14 +101,6 @@ const AccountManagers = ({
         </form>
       </Modal>
       <Table columns={columns} data={datasets} />
-
-      {/* Nút "Thêm Nhân Viên" ở góc dưới cùng bên phải */}
-      <button
-        type="button"
-        className="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600"
-      >
-        Thêm Nhân Viên
-      </button>
     </div>
   );
 };

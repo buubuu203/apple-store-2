@@ -5,7 +5,6 @@ import { HomePage_Hero } from '../constants';
 import { promo_m2_chip } from '../assets/img';
 const Hero = () => {
     const navigate = useNavigate();
-    // FIXME: khi click vao anh -> navigate to san pham
     const handleLabelClick = () => {
         // Điều hướng đến component SignIn khi label được nhấp
         navigate('/SignIn');

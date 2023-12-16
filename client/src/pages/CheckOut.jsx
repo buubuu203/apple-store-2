@@ -118,9 +118,14 @@ const CheckOut = () => {
           navigate("/");
         }
       })
+      //FIXME: Nhập đủ thông tin vẫn không đặt hàng được
+      //FIXME: Khi chưa đăng nhập thì không check out được
       .catch(() => {
-        toast.error("Lỗi đặt hàng");
+        toast.error("Lỗi đặt hàng", {
+          className: "font-SFPro",
+        });
       });
+
     console.log(orders);
   };
 
@@ -157,7 +162,6 @@ const CheckOut = () => {
       <Toaster />
       <div class="font-SFPro grid sm:px-10 lg:grid-cols-2 lg:px-20 xl:px-32">
         <div class="px-4 pt-8">
-          {/* TODO: backend link giua shopping cart va payment */}
           <p class="text-xl font-medium">Sản phẩm đã chọn</p>
           <p class="text-gray-400">
             Kiểm tra các mục của bạn. Và lựa chọn phương thức vận chuyển phù

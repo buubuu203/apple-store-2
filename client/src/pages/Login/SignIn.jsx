@@ -6,7 +6,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { onLogin } from "../../api/user";
 import AppleIcon from "../../assets/apple.svg";
 
-// TODO: đăng nhập đăng ký
 const SignIn = ({ loginError }) => {
   const navigate = useNavigate();
 
@@ -20,6 +19,7 @@ const SignIn = ({ loginError }) => {
       password: "",
     },
   });
+  //FIXME: Đăng ký và đăng nhập đều thất bại
   const handleLogin = (data) => {
     console.log("data", data);
     onLogin(data)
@@ -29,7 +29,9 @@ const SignIn = ({ loginError }) => {
         navigate("/");
       })
       .catch((e) => {
-        toast.error("Đăng nhập thất bại");
+        toast.error("Đăng nhập thất bại", {
+          className: "font-SFPro",
+        });
       });
     // if (userName.current.value === 'admin@gmail.com' && password.current.value === 'admin') {
     //     localStorage.setItem("userNameData", "admin@gmail.com")

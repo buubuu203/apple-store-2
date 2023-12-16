@@ -4,7 +4,6 @@ import React from "react";
 import { Controller } from "react-hook-form";
 import { logo } from "../../public/index";
 
-//TODO: Nhập đúng dữ liệu user trong DB mới được trung cập admin
 const Login = ({ methods, handleSubmit }) => {
   return (
     <section className="  bg-gradient-to-b from-black to-gray-700 flex items-center justify-center h-screen">

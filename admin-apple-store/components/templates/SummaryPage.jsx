@@ -1,5 +1,5 @@
 import React from "react";
-//TODO: Báo cáo doanh thu, lợi nhuận và route
+//TODO: Báo cáo doanh thu (tổng tiền đơn hàng theo tháng)
 const SummaryPage = () => {
   return <div>SummaryPage</div>;
 };

@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { FaApple } from "react-icons/fa";
-// import { GiClothes } from "react-icons/gi";
 import { MdSupervisorAccount } from "react-icons/md";
 
 import { Toaster } from "react-hot-toast";
@@ -44,8 +43,9 @@ const USERS = [
     ),
     title: "Quản lý đơn hàng",
   },
+  //FIXME: chưa route cái này
   {
-    key: "/admin/revenue_report",
+    key: "/admin/summary_page",
     icon: (active) => (
       <RiBillFill
         size={20}
@@ -55,32 +55,7 @@ const USERS = [
     ),
     title: "Báo cáo doanh thu",
   },
-  // {
-  //   key: "/admin/employee_managers",
-  //   icon: (active) => (
-  //     <MdPersonSearch
-  //       size={20}
-  //       color={active ? "orange" : "black"}
-  //       className="w-5 h-5"
-  //     />
-  //   ),
-  //   title: "Quản lý nhân viên",
-  // },
 ];
-
-// const POCS = [
-//   {
-//     key: "/admin/discount",
-//     icon: (active) => (
-//       <MdOutlineLocalActivity
-//         size={20}
-//         color={active ? "orange" : "black"}
-//         className="w-5 h-5"
-//       />
-//     ),
-//     title: "Quản lý ưu đãi, marketing",
-//   },
-// ];
 
 const AdminLayout = ({ children }) => {
   const { push } = useRouter();
@@ -224,28 +199,6 @@ const AdminLayout = ({ children }) => {
                   </li>
                 ))}
               </ul>
-              {/* <ul className="pb-4 flex flex-col gap-0.5">
-                <li className="relative py-1 px-2 text-sm font-bold text-gray-default">
-                  QUẢN LÝ KHÁC
-                </li>
-                {POCS.map((item) => (
-                  <li className="relative py" key={item.key}>
-                    <Link
-                      className={clsx(
-                        "flex items-center w-full text-sm font-medium transition-colors duration-150 hover:text-gray-800 p-2 rounded-md",
-                        {
-                          "bg-[#F2F2F2] text-black": pathname === item.key,
-                        }
-                      )}
-                      href={item.key}
-                      passHref
-                    >
-                      {item.icon(pathname === item.key)}
-                      <span className="ml-2">{item.title}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul> */}
             </div>
           </div>
         </aside>

@@ -164,7 +164,7 @@ const Employee = () => {
           </ul>
         </div>
         <div className="flex-1 pr-4 h-full flex justify-end items-center">
-          <Modal
+          {/* <Modal
             handleClose={handleCloseAdd}
             isOpen={isAddNew}
             title="Thêm nhân viên"
@@ -213,7 +213,7 @@ const Employee = () => {
                     className="w-full h-full object-contain"
                   />
                 </div> */}
-                <div className="flex-1 flex flex-col gap-2">
+          {/* <div className="flex-1 flex flex-col gap-2">
                   <div>
                     <label
                       htmlFor="name"
@@ -293,15 +293,15 @@ const Employee = () => {
                 </button>
               </div>
             </form>
-          </Modal>
-
+          </Modal> */}
+          {/* 
           <button
             type="button"
             class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 hover:bg-blue-800"
             onClick={() => setIsAddNew(true)}
           >
             Thêm nhân viên
-          </button>
+          </button> */}
         </div>
       </div>
       <div className="flex-1 w-full rounded-lg overflow-x-auto pb-12">

@@ -127,7 +127,6 @@ const SignUp = () => {
                     }}
                   />
                 </div>
-                {/* /TODO: kiểm tra SĐT (vì trong DB xài varchar) */}
                 <div>
                   <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">
                     Số điện thoại

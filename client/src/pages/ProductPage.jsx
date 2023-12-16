@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { getProductById } from "../api/products";
 import Button from "../components/Button";
+import HomePage from "./HomePage";
 import CustomerReviews from "../sections/CustomerReviews";
 // import macM1 from '../assets/img/mac/macbook_air_m1_8gb_256gb_didongviet.webp'
 const ProductPage = ({ updateCount }) => {
@@ -9,15 +10,6 @@ const ProductPage = ({ updateCount }) => {
   const colorRef = useRef("");
   const [product, setProduct] = useState(null);
   // // ref: https://bobbyhadz.com/blog/react-onclick-redirect
-  const navigate = useNavigate();
-
-  const navigateToType = () => {
-    // navigate(`/${product.type}`, { replace: true });
-  };
-
-  const navigateHome = () => {
-    navigate("/");
-  };
 
   const addToCart = (prod) => {
     // lay data cua gio hang (localStorage chi luu data dang string)
@@ -71,8 +63,7 @@ const ProductPage = ({ updateCount }) => {
               <li className="text-left">
                 <div className="-m-1">
                   <Link
-                    href=""
-                    onClick={navigateHome}
+                    to={HomePage}
                     className="rounded-md p-1 text-sm font-medium text-gray-600 focus:text-gray-900 focus:shadow hover:text-gray-800"
                   >
                     {" "}
@@ -86,8 +77,7 @@ const ProductPage = ({ updateCount }) => {
                   <span className="mx-2 text-gray-400">/</span>
                   <div className="-m-1">
                     <Link
-                      href=""
-                      onClick={navigateToType}
+                      to=""
                       className="rounded-md p-1 text-sm font-medium text-gray-600 focus:text-gray-900 focus:shadow hover:text-gray-800"
                     >
                       {" "}
@@ -246,7 +236,13 @@ const ProductPage = ({ updateCount }) => {
                       >
                         <p
                           style={{ background: hex_code }}
-                          className="transition-all text-white ease-linear duration-200 peer-checked:bg-black peer-checked:text-white rounded-lg border border-black px-6 py-2 font-bold"
+                          className={`transition-all ease-linear duration-200 rounded-lg  px-6 py-2 font-bold  ${
+                            name === "Đen" ||
+                            name === "Xanh đen" ||
+                            name === "Tím"
+                              ? "text-white peer-checked:bg-black peer-checked:text-white border-black"
+                              : "text-black peer-checked:bg-white peer-checked:text-black border-white"
+                          }`}
                         >
                           {name}
                         </p>

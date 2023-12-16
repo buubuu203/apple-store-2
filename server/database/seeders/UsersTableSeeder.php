@@ -13,20 +13,20 @@ class UsersTableSeeder extends Seeder
         // Define the user data you want to seed
         $users = [
             [
-                'fullname' => 'John Doe',
-                'email' => 'johndoe@example.com',
-                'phone_number' => '1234567890',
-                'address' => '123 Main St',
-                'password' => Hash::make('password123'),
+                'fullname' => 'Châu Ngọc Bửu Đăng',
+                'email' => 'chaungocbuudang2003@gmail.com',
+                'phone_number' => '0917192680',
+                'address' => 'UIT',
+                'password' => 'chaungocbuudang',
                 'role_id' => 1, // Assuming role_id 1 corresponds to a specific role
                 'deleted' => 0, // Assuming 0 for not deleted
             ],
             [
-                'fullname' => 'Jane Smith',
-                'email' => 'janesmith@example.com',
+                'fullname' => 'Nguyễn Phước Thiện',
+                'email' => '21521462@gm.uit.edu.vn',
                 'phone_number' => '9876543210',
-                'address' => '456 Elm St',
-                'password' => Hash::make('secret123'),
+                'address' => 'UIT, HCMC',
+                'password' => 'thienenpi',
                 'role_id' => 2, // Assuming role_id 2 corresponds to another role
                 'deleted' => 0, // Assuming 0 for not deleted
             ],

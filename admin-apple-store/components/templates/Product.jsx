@@ -137,6 +137,7 @@ const Stock = () => {
         toast.success("Thành công ròi!");
       })
       .catch(() => {
+        //FIXME: Khi bấm xóa lại hiện ra dòng toast này?
         toast.error("Ôi mẹ ơi. Lỗi tui lỗi tui:((");
       });
   };
@@ -703,7 +704,7 @@ const Stock = () => {
                       htmlFor="historyCost"
                       className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
-                      Giá giảm
+                      Giá gốc
                     </label>
                     <Controller
                       name="historyCost"

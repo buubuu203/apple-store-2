@@ -61,14 +61,15 @@ function TopDrawer({ count }) {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-
         <ul className="menu p-4 w-80 min-h-full bg-base-200  text-gray-dark">
-          <li
-            className="text-xl text-black px-3
-                    my-4 "
-          >
-            Túi của bạn đang trống.
-          </li>
+          {count === 0 && (
+            <li
+              className="text-xl text-black px-3
+                  my-4 "
+            >
+              Túi của bạn đang trống.
+            </li>
+          )}
           {!isSinged && (
             <p className="text-base px-3 mb-5">
               <Link className="text-blue underline " onClick={handleLabelClick}>
@@ -79,6 +80,11 @@ function TopDrawer({ count }) {
           )}
 
           {/* Sidebar content here */}
+
+          <li>
+            <Link to="/ShoppingCart">Xem giỏ hàng</Link>
+          </li>
+
           <li>
             {" "}
             <Link>Đơn hàng</Link>
@@ -86,17 +92,12 @@ function TopDrawer({ count }) {
           <li>
             <Link>Mục đã lưu</Link>
           </li>
-          <li>
-            <Link>Tài khoản</Link>
-          </li>
+
           {!isSinged && (
             <li>
               <Link onClick={handleLabelClick}>Đăng nhập</Link>
             </li>
           )}
-          <li>
-            <Link to="/ShoppingCart">Xem giỏ hàng</Link>
-          </li>
         </ul>
       </div>
     </div>

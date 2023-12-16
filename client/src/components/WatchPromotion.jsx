@@ -101,7 +101,6 @@ const WatchPromotion = () => {
                 </div>
             </section>
 
-            {/* FIXME: TẠI SAO RENDER PRODUCT PAGE LỖI (AIRPODS VÀ WATCH) */}
             
         </div>
     )
