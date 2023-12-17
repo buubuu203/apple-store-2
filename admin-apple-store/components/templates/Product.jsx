@@ -15,8 +15,8 @@ import { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { Modal } from "../moleculers";
 import toast from "react-hot-toast";
-import { Volkhov } from "next/font/google";
-
+import { QuestionCircleOutlined } from "@ant-design/icons";
+import { Button, Popconfirm } from "antd";
 // const tabs = [
 //   {
 //     key: "all",
@@ -137,7 +137,6 @@ const Stock = () => {
         toast.success("Thành công ròi!");
       })
       .catch(() => {
-        //FIXME: Khi bấm xóa lại hiện ra dòng toast này?
         toast.error("Ôi mẹ ơi. Lỗi tui lỗi tui:((");
       });
   };
@@ -150,16 +149,27 @@ const Stock = () => {
       })
       .catch(() => {
         setActiveProduct(null);
+        toast.error("Ôi mẹ ơi. Lỗi tui lỗi tui:((");
       });
   };
 
   const onDelete = (id) => {
-    deleteProductById(id).then(() => {
-      setActiveProduct(null);
-      getAllProductByCategoryId(tab).then((res) => {
-        setProduct(res.data);
-      });
-    });
+    //FIXME:
+
+    <Popconfirm
+      title="Delete the task"
+      description="Are you sure to delete this task?"
+      icon={<QuestionCircleOutlined style={{ color: "red" }} />}
+      onConfirm={deleteProductById(id).then(() => {
+        setActiveProduct(null);
+        getAllProductByCategoryId(tab).then((res) => {
+          setProduct(res.data);
+          toast.success("Thành công ròi!");
+        });
+      })}
+    >
+      <Button danger>Delete</Button>
+    </Popconfirm>;
   };
 
   const onCreate = (data) => {
@@ -597,7 +607,7 @@ const Stock = () => {
           </div>
           <div className="flex justify-between gap-1">
             <button
-              type="submit"
+              type="button"
               onClick={() => {
                 onDelete(activeProduct.id);
               }}
@@ -1064,7 +1074,7 @@ const Stock = () => {
 
           <button
             type="button"
-            class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 hover:bg-blue-800"
+            className="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 hover:bg-blue-800"
             onClick={() => setIsAddNew(true)}
           >
             Tạo sản phẩm
@@ -1120,7 +1130,7 @@ const Stock = () => {
 
           <button
             type="button"
-            class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 hover:bg-blue-800"
+            className="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 hover:bg-blue-800"
             onClick={() => setIsAddNewCategory(true)}
           >
             Tạo loại sản phẩm
@@ -1150,7 +1160,7 @@ const Stock = () => {
               </p>
 
               <div className="w-full text-white text-sm flex-1 flex gap-1 items-center justify-between">
-                <p class="text-white bg-red-600 font-medium rounded-lg text-xs p-2">
+                <p className="text-white bg-red-600 font-medium rounded-lg text-xs p-2">
                   Giá: {item.price.toLocaleString()}
                 </p>
                 <p className="text-white bg-gray-700 font-medium rounded-lg text-xs p-2">
@@ -1175,7 +1185,7 @@ const Stock = () => {
                 </div> */}
                 <button
                   type="button"
-                  class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 hover:bg-blue-800"
+                  className="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 hover:bg-blue-800"
                   onClick={() => getProductDetails(item.id)}
                 >
                   Chỉnh sửa

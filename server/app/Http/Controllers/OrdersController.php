@@ -53,5 +53,14 @@ class OrdersController extends Controller
         return response()->json(['message' => 'Orders created successfully', 'orders' => $createdOrders], 201);
     }
 
+    public function getAllOrders()
+    {
+        // Retrieve all orders with their associated products
+        $orders = Order::with('user')->get();
+
+        // Return a JSON response
+        return response()->json(['orders' => $orders], 200);
+    }
+
     // ...
 }

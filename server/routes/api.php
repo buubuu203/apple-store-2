@@ -30,6 +30,7 @@ Route::post('/users/register', [UserController::class, 'register']);
 Route::post('/users/login', [UserController::class, 'login']);
 // orders
 Route::post('/order/create', [OrdersController::class, 'createOrders']);
+Route::get('/orders', [OrdersController::class, 'getAllOrders']);
 //product
 Route::put('/update/product/{id}', [ProductController::class, 'updateProduct']);
 Route::delete('/delete/product/{id}', [ProductController::class, 'deleteProductById']);

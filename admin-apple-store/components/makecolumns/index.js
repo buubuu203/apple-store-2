@@ -75,12 +75,12 @@ export const columnTableInvoiceManagers = () => {
   return [
     {
       header: "EMAIL",
-      accessorKey: "email",
+      accessorKey: "user.email",
       size: 120,
     },
     {
       header: "TÊN ĐẦY ĐỦ",
-      accessorKey: "fullname",
+      accessorKey: "user.fullname",
       size: 120,
     },
     // {
@@ -95,7 +95,7 @@ export const columnTableInvoiceManagers = () => {
     // },
     {
       header: "SỐ ĐIỆN THOẠI",
-      accessorKey: "phone_number",
+      accessorKey: "user.phone_number",
       size: 120,
     },
     {

@@ -19,7 +19,6 @@ const SignIn = ({ loginError }) => {
       password: "",
     },
   });
-  //FIXME: Đăng ký và đăng nhập đều thất bại
   const handleLogin = (data) => {
     console.log("data", data);
     onLogin(data)

@@ -118,8 +118,6 @@ const CheckOut = () => {
           navigate("/");
         }
       })
-      //FIXME: Nhập đủ thông tin vẫn không đặt hàng được
-      //FIXME: Khi chưa đăng nhập thì không check out được
       .catch(() => {
         toast.error("Lỗi đặt hàng", {
           className: "font-SFPro",
@@ -154,35 +152,35 @@ const CheckOut = () => {
 
   return (
     <div>
-      <div class="font-SFPro flex flex-col items-center border-b bg-white py-4 sm:flex-row sm:px-10 lg:px-20 xl:px-32">
-        <Link to="/" class="text-2xl font-bold text-black">
+      <div className="font-SFPro flex flex-col items-center border-b bg-white py-4 sm:flex-row sm:px-10 lg:px-20 xl:px-32">
+        <Link to="/" className="text-2xl font-bold text-black">
           Apple Store
         </Link>
       </div>
       <Toaster />
-      <div class="font-SFPro grid sm:px-10 lg:grid-cols-2 lg:px-20 xl:px-32">
-        <div class="px-4 pt-8">
-          <p class="text-xl font-medium">Sản phẩm đã chọn</p>
-          <p class="text-gray-400">
+      <div className="font-SFPro grid sm:px-10 lg:grid-cols-2 lg:px-20 xl:px-32">
+        <div className="px-4 pt-8">
+          <p className="text-xl font-medium">Sản phẩm đã chọn</p>
+          <p className="text-gray-400">
             Kiểm tra các mục của bạn. Và lựa chọn phương thức vận chuyển phù
             hợp.
           </p>
-          <div class="mt-8 space-y-3 rounded-lg border bg-white px-2 py-4 sm:px-6">
+          <div className="mt-8 space-y-3 rounded-lg border bg-white px-2 py-4 sm:px-6">
             {products?.map((product) => {
               return (
-                <div class="flex flex-col rounded-lg bg-white sm:flex-row">
+                <div className="flex flex-col rounded-lg bg-white sm:flex-row">
                   <img
-                    class="m-2 h-24 w-28 rounded-md border object-cover object-center"
+                    className="m-2 h-24 w-28 rounded-md border object-cover object-center"
                     src={product?.thumbnail}
                     alt={product?.name}
                   />
-                  <div class="flex w-full flex-col px-4 py-4">
-                    <span class="font-semibold">{product?.title}</span>
+                  <div className="flex w-full flex-col px-4 py-4">
+                    <span className="font-semibold">{product?.title}</span>
                     {/* ten bien the - color; gb (backend) */}
-                    <span class="float-right font-bold text-gray-dark">
+                    <span className="float-right font-bold text-gray-dark">
                       Ram: {product?.ram} GB
                     </span>
-                    <p class="text-sm font-bold">
+                    <p className="text-sm font-bold">
                       {" "}
                       Giá {(+product?.price).toLocaleString()} VND
                     </p>
@@ -192,51 +190,57 @@ const CheckOut = () => {
             })}
           </div>
 
-          <p class="mt-8 text-lg font-medium">Phương thức vận chuyển</p>
-          <form class="mt-5 grid gap-6">
-            <div class="relative">
+          <p className="mt-8 text-lg font-medium">Phương thức vận chuyển</p>
+          <form className="mt-5 grid gap-6">
+            <div className="relative">
               <input
-                class="peer hidden"
+                className="peer hidden"
                 id="radio_1"
                 type="radio"
                 name="radio"
                 checked
               />
-              <span class="peer-checked:border-gray-700 absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white"></span>
+              <span className="peer-checked:border-gray-700 absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white"></span>
               <label
-                class="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4"
+                className="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4"
                 for="radio_1"
               >
-                <img class="w-14 object-contain" src={giaohangnhanh} alt="" />
-                <div class="ml-5">
-                  <span class="mt-2 font-semibold">Giao hàng nhanh</span>
-                  <p class="text-slate-500 text-sm leading-6">
+                <img
+                  className="w-14 object-contain"
+                  src={giaohangnhanh}
+                  alt=""
+                />
+                <div className="ml-5">
+                  <span className="mt-2 font-semibold">Giao hàng nhanh</span>
+                  <p className="text-slate-500 text-sm leading-6">
                     Thời gian dự tính: 1-3 ngày
                   </p>
                 </div>
               </label>
             </div>
-            <div class="relative">
+            <div className="relative">
               <input
-                class="peer hidden"
+                className="peer hidden"
                 id="radio_2"
                 type="radio"
                 name="radio"
                 checked
               />
-              <span class="peer-checked:border-gray-700 absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white"></span>
+              <span className="peer-checked:border-gray-700 absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white"></span>
               <label
-                class="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4"
+                className="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4"
                 for="radio_2"
               >
                 <img
-                  class="w-14 object-contain"
+                  className="w-14 object-contain"
                   src={giaohangtietkiem}
                   alt=""
                 />
-                <div class="ml-5">
-                  <span class="mt-2 font-semibold">Giao hàng tiết kiệm</span>
-                  <p class="text-slate-500 text-sm leading-6">
+                <div className="ml-5">
+                  <span className="mt-2 font-semibold">
+                    Giao hàng tiết kiệm
+                  </span>
+                  <p className="text-slate-500 text-sm leading-6">
                     Thời gian dự tính: 1-3 ngày
                   </p>
                 </div>
@@ -244,17 +248,17 @@ const CheckOut = () => {
             </div>
           </form>
         </div>
-        <div class="mt-10 bg-gray-50 px-4 pt-8 lg:mt-0">
-          <p class="text-xl font-medium">Chi tiết thanh toán</p>
-          <p class="text-gray-400">
+        <div className="mt-10 bg-gray-50 px-4 pt-8 lg:mt-0">
+          <p className="text-xl font-medium">Chi tiết thanh toán</p>
+          <p className="text-gray-400">
             Hoàn tất đơn đặt hàng của bạn bằng cách cung cấp chi tiết thanh toán
             của bạn.
           </p>
-          <div class="">
-            <label for="email" class="mt-4 mb-2 block text-sm font-medium">
+          <div className="">
+            <label for="email" className="mt-4 mb-2 block text-sm font-medium">
               Email
             </label>
-            <div class="relative">
+            <div className="relative">
               <Controller
                 name="email"
                 defaultValue=""
@@ -264,16 +268,16 @@ const CheckOut = () => {
                     <input
                       type="text"
                       {...field}
-                      class="w-full rounded-md border border-gray-200 px-4 py-3 pl-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
+                      className="w-full rounded-md border border-gray-200 px-4 py-3 pl-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
                       placeholder="your.email@gmail.com"
                     />
                   );
                 }}
               />
-              <div class="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
+              <div className="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-4 w-4 text-gray-400"
+                  className="h-4 w-4 text-gray-400"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -289,11 +293,11 @@ const CheckOut = () => {
             </div>
             <label
               for="card-holder"
-              class="mt-4 mb-2 block text-sm font-medium"
+              className="mt-4 mb-2 block text-sm font-medium"
             >
               Họ và tên
             </label>
-            <div class="relative">
+            <div className="relative">
               <Controller
                 name="fullname"
                 defaultValue=""
@@ -303,16 +307,16 @@ const CheckOut = () => {
                     <input
                       type="text"
                       {...field}
-                      class="w-full rounded-md border border-gray-200 px-4 py-3 pl-11 text-sm uppercase shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
+                      className="w-full rounded-md border border-gray-200 px-4 py-3 pl-11 text-sm uppercase shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
                       placeholder="Your full name here"
                     />
                   );
                 }}
               />
-              <div class="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
+              <div className="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-4 w-4 text-gray-400"
+                  className="h-4 w-4 text-gray-400"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -326,21 +330,24 @@ const CheckOut = () => {
                 </svg>
               </div>
             </div>
-            <label for="card-no" class="mt-4 mb-2 block text-sm font-medium">
+            <label
+              for="card-no"
+              className="mt-4 mb-2 block text-sm font-medium"
+            >
               Chi tiết thẻ
             </label>
-            <div class="flex gap-2">
-              <div class="relative w-7/12 flex-shrink-0">
+            <div className="flex gap-2">
+              <div className="relative w-7/12 flex-shrink-0">
                 <input
                   type="text"
                   id="card-no"
                   name="card-no"
-                  class="w-full rounded-md border border-gray-200 px-2 py-3 pl-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
+                  className="w-full rounded-md border border-gray-200 px-2 py-3 pl-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
                   placeholder="xxxx-xxxx-xxxx-xxxx"
                 />
-                <div class="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
+                <div className="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
                   <svg
-                    class="h-4 w-4 text-gray-400"
+                    className="h-4 w-4 text-gray-400"
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
                     height="16"
@@ -355,34 +362,34 @@ const CheckOut = () => {
               <input
                 type="text"
                 name="credit-expiry"
-                class="w-full rounded-md border border-gray-200 px-2 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
+                className="w-full rounded-md border border-gray-200 px-2 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
                 placeholder="MM/YY"
               />
               <input
                 type="text"
                 name="credit-cvc"
-                class="w-1/6 flex-shrink-0 rounded-md border border-gray-200 px-2 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
+                className="w-1/6 flex-shrink-0 rounded-md border border-gray-200 px-2 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
                 placeholder="CVC"
               />
             </div>
             <label
               for="billing-address"
-              class="mt-4 mb-2 block text-sm font-medium"
+              className="mt-4 mb-2 block text-sm font-medium"
             >
               Địa chỉ thanh toán
             </label>
-            <div class="flex gap-2 flex-col sm:flex-row">
-              <div class="relative flex-shrink-0 sm:w-7/12">
+            <div className="flex gap-2 flex-col sm:flex-row">
+              <div className="relative flex-shrink-0 sm:w-7/12">
                 <input
                   type="text"
                   id="billing-address"
                   name="billing-address"
-                  class="w-full rounded-md border border-gray-200 px-4 py-3 pl-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
+                  className="w-full rounded-md border border-gray-200 px-4 py-3 pl-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
                   placeholder="Số nhà, đường, phường/xã, quận/huyện"
                 />
-                <div class="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
+                <div className="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
                   <img
-                    class="h-4 w-4 object-contain"
+                    className="h-4 w-4 object-contain"
                     src="https://flagpack.xyz/_nuxt/82862d96f28cd0c385b2afb862be8393.svg"
                     alt=""
                   />
@@ -391,7 +398,7 @@ const CheckOut = () => {
               <select
                 type="text"
                 name="billing-state"
-                class="w-full rounded-md border border-gray-200 px-4 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
+                className="w-full rounded-md border border-gray-200 px-4 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
               >
                 {Provinces.map((item) => (
                   <option value={item}>{item}</option>
@@ -402,27 +409,29 @@ const CheckOut = () => {
               <input
                 type="text"
                 name="billing-zip"
-                class="flex-shrink-0 rounded-md border border-gray-200 px-4 py-3 text-sm shadow-sm outline-none sm:w-1/6 focus:z-10 focus:border-blue-500 focus:ring-blue-500"
+                className="flex-shrink-0 rounded-md border border-gray-200 px-4 py-3 text-sm shadow-sm outline-none sm:w-1/6 focus:z-10 focus:border-blue-500 focus:ring-blue-500"
                 placeholder="ZIP"
               />
             </div>
 
             {/* <!-- Total --> */}
-            <div class="mt-6 border-t border-b py-2">
-              <div class="flex items-center justify-between">
-                <p class="text-sm font-medium text-gray-900">Tổng phụ</p>
-                <p class="font-semibold text-gray-900">
+            <div className="mt-6 border-t border-b py-2">
+              <div className="flex items-center justify-between">
+                <p className="text-sm font-medium text-gray-900">Tổng phụ</p>
+                <p className="font-semibold text-gray-900">
                   {totalPrice?.toLocaleString()}
                 </p>
               </div>
-              <div class="flex items-center justify-between">
-                <p class="text-sm font-medium text-gray-900">Phí vận chuyển</p>
-                <p class="font-semibold text-gray-900">0.000 đ</p>
+              <div className="flex items-center justify-between">
+                <p className="text-sm font-medium text-gray-900">
+                  Phí vận chuyển
+                </p>
+                <p className="font-semibold text-gray-900">0.000 đ</p>
               </div>
             </div>
-            <div class="mt-6 flex items-center justify-between">
-              <p class="text-sm font-medium text-gray-900">Tổng cộng</p>
-              <p class="text-2xl font-semibold text-gray-900">
+            <div className="mt-6 flex items-center justify-between">
+              <p className="text-sm font-medium text-gray-900">Tổng cộng</p>
+              <p className="text-2xl font-semibold text-gray-900">
                 {totalPrice?.toLocaleString()} đ
               </p>
             </div>
@@ -430,7 +439,7 @@ const CheckOut = () => {
           <Button
             title="Place Order"
             onClick={resetCart}
-            class="mt-4 mb-8 w-full rounded-md bg-gray-900 px-6 py-3 font-medium text-white"
+            className="mt-4 mb-8 w-full rounded-md bg-gray-900 px-6 py-3 font-medium text-white"
           ></Button>
         </div>
       </div>

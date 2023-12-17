@@ -13,7 +13,7 @@ const ShoppingCart = () => {
     const product = newProducts.find((prod) => prod?.id === id);
     product.quantity = +quantity;
     setProducts(newProducts);
-    const totalPrice = newProducts.reduce((total, product) => {
+    const totalPrice = newProducts?.reduce((total, product) => {
       return total + +product?.total * +product.quantity;
     }, 0);
     setTotalPrice(totalPrice);
@@ -51,7 +51,7 @@ const ShoppingCart = () => {
     const cartJSONString = window.localStorage.getItem("cart");
     // Vi string JSON muon chuyen ve dang truoc do [1] thi dungf JSON.parse
     const cart = JSON.parse(cartJSONString);
-    const totalPrice = cart.reduce((total, product) => {
+    const totalPrice = cart?.reduce((total, product) => {
       return total + +product?.total * +product.quantity;
     }, 0);
     setTotalPrice(totalPrice);
@@ -66,6 +66,13 @@ const ShoppingCart = () => {
     // Điều hướng đến component SignIn khi label được nhấp
     navigate("/CheckOut");
   };
+  useEffect(() => {
+    const userJson = window.localStorage.getItem("_user");
+    const _user = JSON.parse(userJson);
+    if (!_user.id) {
+      navigate("/SignIn");
+    }
+  }, []);
   return (
     <div className="font-SFPro">
       <div className="fixed top-0 w-full h-full bg-black bg-opacity-90 overflow-y-auto overflow-x-hidden">
@@ -133,7 +140,7 @@ const ShoppingCart = () => {
                         </div>
                       </td>
                       <td className="py-4 text-sm">
-                        {(+product?.price).toLocaleString()}
+                        {(+product?.price)?.toLocaleString()}
                       </td>
                       <td className="py-4 text-sm">
                         <div className="flex items-center">
@@ -159,7 +166,7 @@ const ShoppingCart = () => {
                         </div>
                       </td>
                       <td className="py-4 text-sm">
-                        {(+product?.total * product.quantity).toLocaleString(
+                        {(+product?.total * product.quantity)?.toLocaleString(
                           "en-GB"
                         )}{" "}
                         đ
@@ -183,7 +190,7 @@ const ShoppingCart = () => {
                 <h2 className="text-lg font-semibold mb-4">Tổng cộng</h2>
                 <div className="flex justify-between mb-2">
                   <span>Tổng tiền hàng</span>
-                  <span>{totalPrice.toLocaleString("en-GB")} đ</span>
+                  <span>{totalPrice?.toLocaleString("en-GB")} đ</span>
                 </div>
                 <div className="flex justify-between mb-2">
                   <span>Thuế</span>
@@ -197,7 +204,7 @@ const ShoppingCart = () => {
                 <div className="flex justify-between mb-2">
                   <span className="font-semibold">Tổng cộng</span>
                   <span className="font-semibold">
-                    {totalPrice.toLocaleString("en-GB")} đ
+                    {totalPrice?.toLocaleString("en-GB")} đ
                   </span>
                 </div>
                 <button

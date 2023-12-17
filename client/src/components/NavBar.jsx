@@ -4,16 +4,22 @@ import { IoCloseSharp } from "react-icons/io5";
 import { getAllNameCategories } from "../api/category";
 
 import TopDrawer from "./Drawer";
+import { Link } from "react-router-dom";
 const Navbar = ({ count }) => {
   const [toggleMenu, setToggleMenu] = useState(false);
   // React state to manage visibility
   const [show, setShow] = useState();
   const [navLinks, setNavLinks] = useState([]);
-
+  const [isSinged, setIsSinged] = useState(false);
   // function to toggle the boolean value
   function handleClick() {
     setShow(!show);
   }
+  const handleSignOut = () => {
+    window.localStorage.removeItem("_user");
+    window.location.reload();
+    setShow(false);
+  };
 
   useEffect(() => {
     getAllNameCategories()
@@ -22,6 +28,12 @@ const Navbar = ({ count }) => {
         setNavLinks(data);
       })
       .catch((e) => console.log("e", e));
+  }, []);
+
+  useEffect(() => {
+    const userJson = window.localStorage.getItem("_user");
+    const user = JSON.parse(userJson);
+    setIsSinged(!!user);
   }, []);
 
   return (
@@ -78,7 +90,10 @@ const Navbar = ({ count }) => {
           ></div>
         </nav>
 
-        <div className="absolute lg:hidden top-3 right-4 ">
+        <label
+          htmlFor="my-drawer"
+          className="absolute lg:hidden top-3 right-4 "
+        >
           <GiHamburgerMenu
             color="#fff"
             fontSize={27}
@@ -102,8 +117,12 @@ const Navbar = ({ count }) => {
                     </a>
                   </li>
                 ))}
+                {isSinged && (
+                  <li>
+                    <Link onClick={handleSignOut}>Đăng xuất</Link>
+                  </li>
+                )}
               </ul>
-              {/* FIXME: giỏ hàng không hiện khi bấm toogle menu  */}
 
               <div className="flex">
                 <div
@@ -111,11 +130,11 @@ const Navbar = ({ count }) => {
                   onClick={handleClick}
                 ></div>
 
-                <TopDrawer count={count} />
+                <TopDrawer count={count} isVisible={toggleMenu} />
               </div>
             </div>
           )}
-        </div>
+        </label>
       </header>
     </>
   );

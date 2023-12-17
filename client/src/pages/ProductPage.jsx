@@ -272,8 +272,7 @@ const ProductPage = ({ updateCount }) => {
               </div>
 
               {/* Add to cart btn */}
-              {/* TODO: add to cart can be used, connect w the shopping cart page */}
-              <div class="w-fit">
+              <div className="w-fit">
                 <Button
                   onClick={() => addToCart(product)}
                   title="Thêm vào giỏ hàng"

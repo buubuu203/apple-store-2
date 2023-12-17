@@ -5,9 +5,10 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { FaApple } from "react-icons/fa";
 import { MdSupervisorAccount } from "react-icons/md";
-
+import { GiReceiveMoney } from "react-icons/gi";
 import { Toaster } from "react-hot-toast";
 import { HiHome } from "react-icons/hi";
+
 import { RiBillFill } from "react-icons/ri";
 const USERS = [
   {
@@ -43,11 +44,10 @@ const USERS = [
     ),
     title: "Quản lý đơn hàng",
   },
-  //FIXME: chưa route cái này
   {
     key: "/admin/summary_page",
     icon: (active) => (
-      <RiBillFill
+      <GiReceiveMoney
         size={20}
         color={active ? "orange" : "black"}
         className="w-5 h-5"
