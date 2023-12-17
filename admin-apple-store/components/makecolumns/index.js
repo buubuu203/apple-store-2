@@ -19,16 +19,6 @@ export const columnTableAccountManagers = (openModel, refresh) => {
       accessorKey: "address",
       size: 120,
     },
-    // {
-    //   header: "KHU VỰC",
-    //   accessorKey: "region",
-    //   size: 90,
-    // },
-    // {
-    //   header: "TỈNH THÀNH",
-    //   accessorKey: "addressCityProvince",
-    //   size: 120,
-    // },
     {
       header: "SỐ ĐIỆN THOẠI",
       accessorKey: "phone_number",
@@ -83,16 +73,6 @@ export const columnTableInvoiceManagers = () => {
       accessorKey: "user.fullname",
       size: 120,
     },
-    // {
-    //   header: "KHU VỰC",
-    //   accessorKey: "region",
-    //   size: 90,
-    // },
-    // {
-    //   header: "TỈNH THÀNH",
-    //   accessorKey: "addressCityProvince",
-    //   size: 120,
-    // },
     {
       header: "SỐ ĐIỆN THOẠI",
       accessorKey: "user.phone_number",
@@ -123,6 +103,26 @@ export const columnTableInvoiceManagers = () => {
           <MdOutlineMode size={18} />
         </button>
       ),
+    },
+  ];
+};
+
+export const columnTableSummary = () => {
+  return [
+    {
+      header: "PRODUCT ID",
+      accessorKey: "product_id",
+      size: 120,
+    },
+    {
+      header: "MONEY",
+      accessorKey: "total_money",
+      size: 120,
+    },
+    {
+      header: "ORDER DATE",
+      accessorKey: "order_date",
+      size: 120,
     },
   ];
 };

@@ -153,23 +153,38 @@ const Stock = () => {
       });
   };
 
-  const onDelete = (id) => {
-    //FIXME:
+  // const onDelete = (id) => {
 
-    <Popconfirm
-      title="Delete the task"
-      description="Are you sure to delete this task?"
-      icon={<QuestionCircleOutlined style={{ color: "red" }} />}
-      onConfirm={deleteProductById(id).then(() => {
-        setActiveProduct(null);
-        getAllProductByCategoryId(tab).then((res) => {
-          setProduct(res.data);
-          toast.success("Thành công ròi!");
+  //   deleteProductById(id).then(() => {
+  //     setActiveProduct(null);
+  //     getAllProductByCategoryId(tab).then((res) => {
+  //       setProduct(res.data);
+  //       toast.success("Thành công ròi!");
+  //     });
+  //   });
+  // };
+  const onDelete = (id) => {
+    // Hiển thị hộp thoại xác nhận
+    const userConfirmed = window.confirm(
+      "Bạn có chắc muốn xóa sản phẩm này không?"
+    );
+
+    // Nếu người dùng đã xác nhận
+    if (userConfirmed) {
+      deleteProductById(id)
+        .then(() => {
+          setActiveProduct(null);
+          getAllProductByCategoryId(tab).then((res) => {
+            setProduct(res.data);
+            toast.success("Thành công rồi!");
+          });
+        })
+        .catch((error) => {
+          // Xử lý lỗi khi xóa sản phẩm
+          console.error("Lỗi khi xóa sản phẩm:", error);
+          toast.error("Đã xảy ra lỗi khi xóa sản phẩm!");
         });
-      })}
-    >
-      <Button danger>Delete</Button>
-    </Popconfirm>;
+    }
   };
 
   const onCreate = (data) => {

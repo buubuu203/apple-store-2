@@ -69,7 +69,7 @@ const ShoppingCart = () => {
   useEffect(() => {
     const userJson = window.localStorage.getItem("_user");
     const _user = JSON.parse(userJson);
-    if (!_user.id) {
+    if (!_user?.id) {
       navigate("/SignIn");
     }
   }, []);

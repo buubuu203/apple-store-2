@@ -1,8 +1,20 @@
 import React from "react";
+import { Table } from "../atoms";
 
-const SummaryPage = () => {
+const SummaryPageTable = ({ columns, datasets, totalRevenue }) => {
   //TODO: Summary
-  return <div className="bg-white text-black "></div>;
+  const formattedTotalRevenue = totalRevenue.toLocaleString("vi-VN", {
+    style: "currency",
+    currency: "VND",
+  });
+  return (
+    <div className="flex flex-col w-full h-full gap-2">
+      <Table columns={columns} data={datasets} />
+      <div className="text-center font-bold uppercase text-white bg-slate-800 py-2 rounded-lg">
+        Total Revenue: {formattedTotalRevenue}
+      </div>
+    </div>
+  );
 };
 
-export default SummaryPage;
+export default SummaryPageTable;
