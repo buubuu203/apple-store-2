@@ -2,7 +2,6 @@ import React from "react";
 import { Table } from "../atoms";
 
 const SummaryPageTable = ({ columns, datasets, totalRevenue }) => {
-  //TODO: Summary
   const formattedTotalRevenue = totalRevenue.toLocaleString("vi-VN", {
     style: "currency",
     currency: "VND",

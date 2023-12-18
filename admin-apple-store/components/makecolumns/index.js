@@ -79,30 +79,14 @@ export const columnTableInvoiceManagers = () => {
       size: 120,
     },
     {
-      header: "VAI TRÒ",
-      accessorKey: "role_id",
+      header: "MÃ SP",
+      accessorKey: "product_id",
       size: 120,
-      cell: (info) => (
-        <p
-          type="button"
-          class="inline-flex items-center py-1.5 px-3 text-xs font-medium text-center text-white bg-blue-700 rounded-full focus:ring-4 focus:ring-blue-200 hover:bg-blue-800"
-        >
-          {info?.getValue()}
-        </p>
-      ),
     },
     {
-      header: "TUỲ CHỌN",
-      accessorKey: "actions",
-      size: 124,
-      cell: () => (
-        <button
-          type="button"
-          class="inline-flex items-center py-2 px-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 hover:bg-blue-800"
-        >
-          <MdOutlineMode size={18} />
-        </button>
-      ),
+      header: "MONEY",
+      accessorKey: "total_money",
+      size: 120,
     },
   ];
 };
