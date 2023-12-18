@@ -182,9 +182,9 @@ Product Management
     <li>Full-stack dev: <a style="text-decoration: none;" href="https://github.com/buubuu203"> Châu Ngọc Bửu Đăng</a></li>
     <li>Back-end dev: <a style="text-decoration: none;" href="https://github.com/Huynhphuoclan"> Huỳnh Phước Lân</a></li>
     <li>Report Writer: <a style="text-decoration: none;" href="https://github.com/thienenpi">Nguyễn Phước Thiện</a></li> 
-    <li>Supporter: <a style="text-decoration: none;" href="https://github.com/LTThuyLinh">Lê Trần Thùy Linh</a></li>
-    <li>Supporter: <a style="text-decoration: none;" href="https://github.com/hhanh123">Hoàng Thị Mỹ Hạnh</a></li>  
-    <li>Supporter: <a style="text-decoration: none;" href="https://github.com/">Lê Yến Nhi</a></li>
+    <li>Assistant: <a style="text-decoration: none;" href="https://github.com/LTThuyLinh">Lê Trần Thùy Linh</a></li>
+    <li>Assistant: <a style="text-decoration: none;" href="https://github.com/hhanh123">Hoàng Thị Mỹ Hạnh</a></li>  
+    <li>Assistant: <a style="text-decoration: none;" href="https://github.com/">Lê Yến Nhi</a></li>
    </div>
   
   <!-- Instructor -->
