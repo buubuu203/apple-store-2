@@ -46,24 +46,27 @@
 <div id="MoDau">
     <h3>Introduction</h3>
     <p id="description">
-    Welcome to our website, your one-stop-shop for all things Apple. Are you a fan of the sleek design, cutting-edge technology, and unparalleled user experience that Apple products offer? If so, you're in the right place!
+        Discover the extraordinary world of Apple at Apple Store, your ultimate destination for the latest and finest Apple products. If you're passionate about sleek design, cutting-edge technology, and an unparalleled user experience, you've arrived at the perfect place.
 
-Our website is a haven for Apple enthusiasts. Whether you're in search of the latest iPhone, the most powerful MacBook, or the newest Apple Watch, we've got you covered. We offer a wide range of Apple products, all at competitive prices, ensuring that you can always stay up to date with the latest and greatest in tech.
+        At Apple Store, we pride ourselves on being more than just a store; we are a haven for Apple enthusiasts. Whether you're on the hunt for the newest iPhone, the most powerful MacBook, or the latest Apple Watch, we've curated a diverse range of Apple products, all offered at competitive prices.
 
-Why choose us?
+        Why choose Apple Store?
 
-    - Extensive Selection: We provide a comprehensive collection of Apple products, including iPhones, iPads, MacBooks, Apple Watches, and accessories, all in one convenient location.
-    Competitive Prices: Our commitment to offering competitive prices ensures you get the best value for your money.
+        - **Extensive Selection:** Explore our comprehensive collection, featuring the latest iPhones, iPads, MacBooks, Apple Watches, and accessories, all conveniently located in one place.
+        
+        - **Competitive Prices:** Our commitment to competitive pricing ensures you receive the best value for your investment.
+        
+        - **Quality Assurance:** Rest easy knowing that every product we sell is guaranteed to be authentic and of the highest quality.
+        
+        - **Easy Shopping Experience:** Navigate our user-friendly website effortlessly, making it a breeze to browse, compare, and purchase your favorite Apple gadgets.
+        
+        - **Fast and Secure Shipping:** Enjoy a seamless shopping experience with our reliable and secure shipping options.
+        
+        Join the Apple revolution today and immerse yourself in a world of innovation, style, and functionality. Elevate your digital lifestyle to new heights by shopping with us at [Your Store Name].
 
-    - Quality Assurance: We guarantee the authenticity and quality of every product we sell.
-
-    - Easy Shopping Experience: Our user-friendly website makes it a breeze to browse, compare, and purchase your favorite Apple gadgets.
-
-    - Fast and Secure Shipping: Enjoy a hassle-free shopping experience with our reliable and secure shipping options.
-    Join the Apple revolution today and explore the world of innovation, style, and functionality. Shop with us, and elevate your digital lifestyle to new heights!
-
-Visit our website now and discover the magic of Apple at your fingertips. 
+        Visit our website now and experience the magic of Apple at your fingertips.
 </p>
+</div>
 </div>
 <!-- Description  -->
 <div id="MoTa">
@@ -89,8 +92,8 @@ Visit our website now and discover the magic of Apple at your fingertips.
 <p>The application is developed using the following technologies:</p>
 
 <ul>
-    <li>Tool : BE: Laravel + FE: ReactJS</li>
-    <li>IDE: Visual Studio Code</li>
+    <li>Tool: BE: Laravel, Wampserver + FE: ReactJS</li>
+    <li>IDE: Visual Studio Code, </li>
     <li>Database: MySQL</li>
     <li>Management tools: Git, GitHub</li>
 </ul>
@@ -108,19 +111,7 @@ Visit our website now and discover the magic of Apple at your fingertips.
 <div id="mucTieu">
     <h4>Goal</h4>
 
-   <strong>
-    Practical Application
-</strong>
-<p>......</p>
-<strong>Application Requirements</strong>
-
-<p>
-    ......
-     <br>
-    ......
-     <br>
-    ......
-</p>
+<p>Understand and apply knownledge in real project.</p>
   
 </div>
 <div id="tinhNang">
@@ -130,21 +121,15 @@ The application includes the following features:
     
 Account Management
 * Users can create new accounts.
-* Users can retrieve passwords when forgotten or lost.
-* Users can add, delete, and edit their information.
+* Admin can delete, edit user accounts.
+
+Order Management  
+* Users can buy procduct.
+* Admin can view the order.
     
-Room Management  
-* Users can create new room types and rooms.
-* Users can add, delete, and edit room information.
-    
-Customer Management 
-* Users can input and edit customer information.
-* Users can perform customer lookup.
-    
-Rental Vouchers and Invoices Management 
-* Users can input and edit information related to rental vouchers and invoices.
-* Users can perform lookup of rental vouchers and invoices.
-* Realtime Feature
+Product Management
+* Admin can create, edit, delete product.
+
 </div>
 </div>
 <div id="caiDat">
@@ -152,45 +137,69 @@ Rental Vouchers and Invoices Management
 # Install Guide
 ## Requirements
 
-* Flutter SDK
-* Dart SDK
-* A code editor (e.g. Visual Studio Code, IntelliJ IDEA)
+* Node.JS
+* Composer
+* Wampserver
+* A code editor (e.g. Visual Studio Code)
 
 ## Installation
 
 1. Download and install NodeJS from [Node.JS](https://nodejs.org/en)
 2. Download and install Composer from [Composer](https://getcomposer.org/).
-3. Download Apple Store Source : https://github.com/buubuu203/apple-store.
+3. Download Apple Store Source : https://github.com/buubuu203/apple-store-is207.
 4. In the project terminal, run the following command to start the BE and FE:
-+ With BE, run: php artisan serve
-+ With client, run: npm start
-+ With admin, run: yarn dev
++ With BE, run: 
+        
+        composer install
+        
+        php artisan migrate
+        
+        php artisan db:seed
+        
+        php artisan serve
+
++ With client, run: 
+        
+        npm install
+        
+        npm start
+
++ With admin, run: 
+
+        npm yarn install --global
+        
+        yarn
+
+        yarn dev
 
 
 # Author
 
 <div id="tacGia">
 
+
 <ul>
-    <li><a style="text-decoration: none;" href="https://github.com/Huynhphuoclan">Huỳnh Phước Lân</a></li>
-    <li><a style="text-decoration: none;" href="https://github.com/hhanh123">Hoàng Thị Mỹ Hạnh</a></li>
-    <li><a style="text-decoration: none;" href="https://github.com/LTThuyLinh">Lê Trần Thùy Linh</a></li>
-    <li><a style="text-decoration: none;" href="https://github.com/thienenpi">Nguyễn Phước Thiện</a></li>
-    <li><a style="text-decoration: none;" href="https://github.com/buubuu203">Châu Ngọc Bửu Đăng</a></li>
-    <li><a style="text-decoration: none;" href="https://github.com/">Lê Yến Nhi</a></li>
-</
+    <li>Full-stack dev: <a style="text-decoration: none;" href="https://github.com/buubuu203"> Châu Ngọc Bửu Đăng</a></li>
+    <li>Back-end dev: <a style="text-decoration: none;" href="https://github.com/Huynhphuoclan"> Huỳnh Phước Lân</a></li>
+    <li>Report Writer: <a style="text-decoration: none;" href="https://github.com/thienenpi">Nguyễn Phước Thiện</a></li> 
+    <li>Supporter: <a style="text-decoration: none;" href="https://github.com/LTThuyLinh">Lê Trần Thùy Linh</a></li>
+    <li>Supporter: <a style="text-decoration: none;" href="https://github.com/hhanh123">Hoàng Thị Mỹ Hạnh</a></li>  
+    <li>Supporter: <a style="text-decoration: none;" href="https://github.com/">Lê Yến Nhi</a></li>
    </div>
   
   <!-- Instructor -->
 <div id="nguoiHuongDan">
-   <h3>Instructor</h3>GV. 
+   <h3>Instructor</h3>
+    <p>GV Lý thuyết. Trình Trọng Tín </p>
+    <p>GV HDTH. Nguyễn Dương Tùng </p>
+   
 </div>
 <!-- Summary -->
 <div id="tongKet">
     <h3>Conclusion</h3>
     <p>
         This product is the result of the project that the members in the team have worked on together. Through this process, the members have gained knowledge and specific professional skills in real programming processes, gained a better understanding of programming, and learned valuable lessons for their future work.
-    In addition, the team would like to express their sincere gratitude and deep appreciation to the instructor, Mr. ......, who has accompanied them throughout the project to achieve today's results.
+    In addition, the team would like to express their sincere gratitude and deep appreciation to the instructor, Mr. Tín and Tùng, who has accompanied them throughout the project to achieve today's results.
     Thank you for your interest!
 
 
