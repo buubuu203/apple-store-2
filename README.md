@@ -1,5 +1,13 @@
 # APPLE STORE
+<!-- Banner -->
+<div id="banner">
+<p align="center">
+  <a href="https://www.uit.edu.vn/" title="Trường Đại học Công nghệ Thông tin" style="border: none;">
+    <img src="https://i.imgur.com/WmMnSRt.png" alt="Trường Đại học Công nghệ Thông tin | University of Information Technology">
+  </a>
+</p>
 
+</div>
 <div id="top"></div>
 <!-- Table of Contents -->
 <ul id="nav">
@@ -177,21 +185,22 @@ Product Management
 
 <div id="tacGia">
 
-
-<ul>
-    <li>Full-stack dev: <a style="text-decoration: none;" href="https://github.com/buubuu203"> Châu Ngọc Bửu Đăng</a></li>
-    <li>Back-end dev: <a style="text-decoration: none;" href="https://github.com/Huynhphuoclan"> Huỳnh Phước Lân</a></li>
-    <li>Report Writer: <a style="text-decoration: none;" href="https://github.com/thienenpi">Nguyễn Phước Thiện</a></li> 
-    <li>Assistant: <a style="text-decoration: none;" href="https://github.com/LTThuyLinh">Lê Trần Thùy Linh</a></li>
-    <li>Assistant: <a style="text-decoration: none;" href="https://github.com/hhanh123">Hoàng Thị Mỹ Hạnh</a></li>  
-    <li>Assistant: <a style="text-decoration: none;" href="https://github.com/">Lê Yến Nhi</a></li>
-   </div>
+|Num|    ID     |        Name                                          |     Role       | 
+|--:|----------:|-----------------------------------------------------:|---------------:|
+| 1 | 21521064  | [Huỳnh Phước Lân](https://github.com/Huynhphuoclan)  | Back-end dev   | 
+| 2 | 21521918  | [Châu Ngọc Bửu Đăng](https://github.com/buubuu203)   | Full-stack dev |
+| 3 | 21521462  | [Nguyễn Phước Thiện](https://github.com/thienenpi)   | Report Writer  |
+| 4 | 21520324  | [Lê Trần Thùy Linh](https://github.com/LTThuyLinh)   | Assistant      |
+| 5 | 21522044  | [Hoàng Thị Mỹ Hạnh](https://github.com/hhanh123)     | Assistant      |
+| 6 | 21522427  | [Lê Yến Nhi](https://github.com/yenlenhi)            | Assistant      |
+   
+</div>
   
   <!-- Instructor -->
 <div id="nguoiHuongDan">
    <h3>Instructor</h3>
-    <p>GV Lý thuyết. Trình Trọng Tín </p>
-    <p>GV HDTH. Nguyễn Dương Tùng </p>
+    <p>Mr. Trình Trọng Tín </p>
+    <p>Mr. Nguyễn Dương Tùng </p>
    
 </div>
 <!-- Summary -->
