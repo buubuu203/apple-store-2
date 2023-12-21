@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/NavBar";
-
+import ContactSpeedDial from "../components/SpeedDial";
 const DefaultLayout = ({ children }) => {
   const [count, setCount] = useState(0);
   const updateCount = (num) => {
@@ -17,6 +17,7 @@ const DefaultLayout = ({ children }) => {
   return (
     <div>
       <Navbar count={count}></Navbar>
+      <ContactSpeedDial />
       {React.cloneElement(children, { updateCount })}
       <Footer />
     </div>

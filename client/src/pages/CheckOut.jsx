@@ -111,7 +111,9 @@ const CheckOut = () => {
       .then(() => {
         // window.localStorage.removeItem("cart");
         // navigate("/");
-        const result = window.confirm("Are you sure you want to proceed?");
+        const result = window.confirm(
+          "Bạn có sure là đặt hàng hok? Có thì yes"
+        );
         if (result) {
           window.localStorage.removeItem("cart");
           toast.success("Đặt hàng thành công");

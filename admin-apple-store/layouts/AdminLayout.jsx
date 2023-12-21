@@ -106,7 +106,7 @@ const AdminLayout = ({ children }) => {
             {/* <!-- Notifications menu --> */}
             <li className="relative h-full flex items-center">
               <button
-                className="relative align-middle rounded-md focus:outline-none 
+                className=" relative align-middle rounded-md focus:outline-none 
                 m-auto focus:shadow-outline-purple"
                 aria-label="Notifications"
                 aria-haspopup="true"
@@ -122,7 +122,7 @@ const AdminLayout = ({ children }) => {
                 {/* <!-- Notification badge --> */}
                 <span
                   aria-hidden="true"
-                  className="absolute top-0 right-0 inline-block w-3 h-3 transform translate-x-1 -translate-y-1 bg-red-600 border-2 border-white rounded-full dark:border-gray-800"
+                  className="animate-ping absolute top-0 right-0 inline-block w-3 h-3 transform translate-x-1 -translate-y-1 bg-red-600 border-2 border-white rounded-full dark:border-gray-800"
                 ></span>
               </button>
             </li>

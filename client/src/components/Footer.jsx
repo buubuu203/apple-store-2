@@ -25,6 +25,7 @@ const Footer = () => {
                     <Link className="text-gray dark:text-neutral-200 dark:hover:text-white hover:text-black font-thin ">Chính sách quyền riêng tư</Link>
                     <Link className="text-gray dark:text-neutral-200 dark:hover:text-white hover:text-black font-thin ">Chính sách cookie</Link>
                 </nav>
+                
             </footer>
             <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300 font-SFPro">
                 <aside className="items-center grid-flow-col">
