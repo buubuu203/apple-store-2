@@ -276,10 +276,10 @@ const Stock = () => {
                 >
                   Màu sản phẩm
                 </label>
-                <div className="flex gap-2 items-center flex-col">
+                <div className="forced-color-adjust-none flex gap-2 items-center flex-col">
                   {activeProduct?.product_colors?.map((item, index) => {
                     return (
-                      <div className="flex items-center gap-4">
+                      <div className="flex items-center gap-4 ">
                         <Controller
                           name={`product_colors.${index}.hex_code`}
                           defaultValue={null}
