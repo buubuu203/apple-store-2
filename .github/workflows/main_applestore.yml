@@ -23,8 +23,6 @@ jobs:
 
       - name: npm install, build, and test
         run: |
-          cd client
-          npm install
           npm start
           
 
