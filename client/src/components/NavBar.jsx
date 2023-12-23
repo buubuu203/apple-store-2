@@ -36,6 +36,12 @@ const Navbar = ({ count }) => {
     setIsSinged(!!user);
   }, []);
 
+  // const [searchQuery, setSearchQuery] = useState("");
+  // const handleSearch = () => {
+  //   // Chuyển hướng đến trang danh sách sản phẩm với truy vấn tìm kiếm
+  //   window.location.href = `/searchlist?search=${encodeURIComponent(searchQuery)}`;
+  // };
+
   return (
     <>
       <header className="sm:px-8 p-3 z-10 w-full font-SFPro bg-black text-white fixed">
@@ -56,6 +62,13 @@ const Navbar = ({ count }) => {
               </li>
             ))}
           </ul>
+          {/* <input
+            type="text"
+            placeholder="Tìm kiếm sản phẩm..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+          <button onClick={handleSearch}>Tìm kiếm</button> */}
 
           {show && (
             <div>

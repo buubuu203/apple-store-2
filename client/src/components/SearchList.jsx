@@ -25,12 +25,23 @@ const ProductList = (props) => {
         }).catch((e)=> console.log('e', e))
 
     },[id])
-    
+
+    const { search } = useParams();
+    const [filteredProducts, setFilteredProducts] = useState([]);
+
+    useEffect(() => {
+        // Thực hiện lọc sản phẩm dựa trên truy vấn tìm kiếm
+        const filtered = products.filter((product) =>
+          product.title.toLowerCase().includes(search.toLowerCase())
+        );
+        setFilteredProducts(filtered);
+    }, [search, products]);
+
     return (
         <div className="p-4 py-8">
 
             <div className='mt-16 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-6 gap-14 px-4'>
-                {products.slice((page - 1) * 8, ((page) * 8)).map((product) => (
+                {filteredProducts.slice((page - 1) * 8, ((page) * 8)).map((product) => (
 
                     < ProductCard
                         key={product.title}
